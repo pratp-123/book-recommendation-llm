@@ -3,4 +3,6 @@
 .venv/
 venv/
 .idea/
+*.csv/
+tagged_description.txt
 
