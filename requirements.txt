@@ -76,7 +76,7 @@ langchain-core==0.3.69
 langchain-google-genai==2.1.8
 langchain-text-splitters==0.3.8
 chromadb==0.3.8
-torch==2.1.0
+torch
 transformers==4.30.0
 huggingface-hub==0.15.1
 gunicorn==20.1.0
