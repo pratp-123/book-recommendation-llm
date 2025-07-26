@@ -105,4 +105,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## 🙋‍♂️ Author
 
 **Prateek Chauhan**  
-[GitHub](https://github.com/pratp-123) | [LinkedIn]([https://www.linkedin.com/in/your-link](https://www.linkedin.com/in/prateek-chauhan-291301218/))
+[GitHub](https://github.com/pratp-123) | [LinkedIn](https://www.linkedin.com/in/prateek-chauhan-291301218/)
