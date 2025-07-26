@@ -3,9 +3,9 @@ import numpy as np
 from dotenv import load_dotenv
 
 from langchain_community.document_loaders import TextLoader
-from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_text_splitters import CharacterTextSplitter
 from langchain_chroma import Chroma
+from langchain.embeddings import HuggingFaceEmbeddings
 
 import gradio as gr
 
