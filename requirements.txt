@@ -80,3 +80,5 @@ transformers>=4.37.0
 pandas
 numpy
 python-dotenv
+langchain-huggingface
+sentence-transformers
