@@ -23,7 +23,9 @@ books["large_thumbnail"] = np.where(
 raw_documents = TextLoader("tagged_description.txt", encoding="utf-8").load()
 text_splitter = CharacterTextSplitter(chunk_size=0, chunk_overlap=0,separator="\n")
 documents = text_splitter.split_documents(raw_documents)
-db_books = Chroma.from_documents(documents, GoogleGenerativeAIEmbeddings(model="models/embedding-001"))
+db_books = Chroma.from_documents(documents, embeddings = HuggingFaceEmbeddings(
+    model_name="sentence-transformers/all-MiniLM-L6-v2"
+))
 
 
 def retrieve_semantic_recommendations(
