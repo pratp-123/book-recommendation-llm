@@ -5,8 +5,7 @@ from dotenv import load_dotenv
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import CharacterTextSplitter
 from langchain_chroma import Chroma
-from langchain_community.embeddings import HuggingFaceEmbeddings
-
+from langchain_huggingface import HuggingFaceEmbeddings
 import gradio as gr
 
 load_dotenv()
@@ -23,9 +22,11 @@ books["large_thumbnail"] = np.where(
 raw_documents = TextLoader("tagged_description.txt", encoding="utf-8").load()
 text_splitter = CharacterTextSplitter(chunk_size=0, chunk_overlap=0,separator="\n")
 documents = text_splitter.split_documents(raw_documents)
-db_books = Chroma.from_documents(documents, embeddings = HuggingFaceEmbeddings(
-    model_name="sentence-transformers/all-MiniLM-L6-v2"
-))
+embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+db_books = Chroma.from_documents(
+    documents, 
+    embedding=embeddings  # Note: 'embedding', not 'embeddings'
+)
 
 
 def retrieve_semantic_recommendations(
@@ -97,7 +98,7 @@ with gr.Blocks(theme = gr.themes.Glass()) as dashboard:
         submit_button = gr.Button("Find recommendations")
 
     gr.Markdown("## Recommendations")
-    output = gr.Gallery(label = "Recommended books", columns = 8, rows = 2)
+    output = gr.Gallery(label = "Recommended books", columns = 1, rows = 16)
 
     submit_button.click(fn = recommend_books,
                         inputs = [user_query, category_dropdown, tone_dropdown],
