@@ -74,7 +74,7 @@ langchain-community==0.3.27
 langchain-core==0.3.69
 langchain-google-genai==2.1.8
 langchain-text-splitters==0.3.8
-chromadb==0.3.8
+chromadb>=1.0.9
 torch==2.7.1
 
 transformers==4.37.0
