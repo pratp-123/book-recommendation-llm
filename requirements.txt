@@ -73,7 +73,7 @@ kubernetes==29.0.0
 
 # LangChain ecosystem (latest compatible with each other)
 langchain==0.3.27
-langchain-core==0.3.70
+langchain-core
 langchain-huggingface==0.3.1
 langchain-community==0.3.27
 langchain-chroma==0.2.4
