@@ -98,7 +98,7 @@ with gr.Blocks(theme = gr.themes.Glass()) as dashboard:
         submit_button = gr.Button("Find recommendations")
 
     gr.Markdown("## Recommendations")
-    output = gr.Gallery(label = "Recommended books", columns = 1, rows = 16)
+    output = gr.Gallery(label = "Recommended books", columns = 4, rows = 4)
 
     submit_button.click(fn = recommend_books,
                         inputs = [user_query, category_dropdown, tone_dropdown],
