@@ -4,16 +4,21 @@ This project is an AI-powered book recommendation system that uses vector embedd
 
 ---
 
+
+
 ## 🚀 Features
 
 - 🔍 Semantic search from book descriptions
 - 📖 Input user interest and receive relevant book suggestions
+
 - 🧠 Vector embeddings powered by Google Gemini or Hugging Face
 - 🌐 Deployable on Render with minimal configuration
 - 🎛️ Gradio dashboard for an interactive UI
 
 ---
 
+## Dashboard
+<img width="1920" height="1080" alt="Screenshot (79)" src="https://github.com/user-attachments/assets/598e07dc-8c15-4b83-aa06-3dfdc1474255" />
 ## 🛠️ Tech Stack
 
 - Python 3.10+ (tested on 3.12/3.13)
