@@ -67,27 +67,19 @@ jupyter_client==8.6.3
 jupyter_core==5.8.1
 kagglehub==0.3.12
 kiwisolver==1.4.8
-# Removed: kubernetes==33.1.0 (incompatible with Python 3.12)
-# You can use kubernetes==29.0.0 if needed
-kubernetes==29.0.0
-
-# LangChain ecosystem (latest compatible with each other)
-langchain==0.3.27
-langchain-core
-langchain-huggingface==0.3.1
-langchain-community==0.3.27
+kubernetes==33.1.0
+langchain==0.3.26
 langchain-chroma==0.2.4
+langchain-community==0.3.27
+langchain-core==0.3.69
 langchain-google-genai==2.1.8
 langchain-text-splitters==0.3.8
-
 chromadb>=1.0.9
-
-# Transformers & Tokenizers (compatible)
-transformers==4.41.1
-tokenizers>=0.19.1
-
 torch==2.7.1
+
+transformers==4.37.0
 pandas
 numpy
 python-dotenv
+langchain-huggingface==0.3.1
 sentence-transformers==2.6.1
